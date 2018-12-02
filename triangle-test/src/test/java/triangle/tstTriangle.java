@@ -53,7 +53,6 @@ public class tstTriangle {
       };
    }
 
-   @Ignore
    @Test (dataProvider = "equilateral")
    public void tstEquilateral(Triangle tr) {
       Assert.assertEquals(tr.detectTriangle(), tr.TR_EQUILATERAL);
