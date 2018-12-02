@@ -72,7 +72,7 @@ public class tstTriangle {
    public Object[][] negativeCheker() {
       return new Object[][]{
               {new Triangle(1, 2, 3)},
-              {new Triangle(-5, 5, 5)},
+              {new Triangle(-7, 5, 5)},
               {new Triangle(5, -5, 5)},
               {new Triangle(5, 5, -5)},
       };
