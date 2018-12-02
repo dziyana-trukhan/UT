@@ -83,10 +83,16 @@ public class tstTriangle {
       Assert.assertFalse(tr.checkTriangle());
    }
 
+    @DataProvider(name = "bigTriangle")
+    public Object[][] bigTriangle() {
+        return new Object[][]{
+                {new Triangle(	1.8*Math.pow(10,308), 1.8*Math.pow(10,308), 1.8*Math.pow(10,308))},
+        };
+    }
 
-
-
-
-
+    @Test (dataProvider = "bigTriangle", expectedExceptions=ArithmeticException.class)
+    public void tstBigTriangle(Triangle tr){
+        tr.getSquare();
+    }
 
 }
